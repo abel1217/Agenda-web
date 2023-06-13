@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agenda Monss</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Agenda Monss</h1>
+    <hr>
+
+    <div class="btn-group" role="group" aria-label="Botones de navegación">
+      <button type="button" class="btn btn-primary gx-lg-5" onclick="mostrarCrearContactos()">Crear Contactos</button>
+     
+      <button type="button" class="btn btn-primary gx-5" onclick="mostrarMostrarContactos()">Mostrar Contactos</button>
+    </div>
+
+    <!-- Sección Crear Contactos -->
+    <div id="seccionCrearContactos" style="display: none;">
+      <h2>Crear Contactos</h2>
+      <form id="formularioCrearContacto">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" class="form-control" id="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="apellido">Apellido:</label>
+          <input type="text" class="form-control" id="apellido" required>
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono:</label>
+          <input type="number" class="form-control" id="telefono" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar Contacto</button>
+      </form>
+      <br>
+      <button type="button" class="btn btn-secondary" onclick="mostrarInicio()">Volver</button>
+      <button type="button" class="btn btn-primary" onclick="mostrarMostrarContactos()">Mostrar Contactos</button>
+    </div>
+
+    <!-- Sección Mostrar Contactos -->
+    <div id="seccionMostrarContactos" style="display: none;">
+      <h2>Mostrar Contactos</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Teléfono</th>
+          </tr>
+        </thead>
+        <tbody id="tablaContactos"></tbody>
+      </table>
+      <br>
+      <button type="button" class="btn btn-secondary" onclick="mostrarInicio()">Volver</button>
+      <button type="button" class="btn btn-primary" onclick="mostrarCrearContactos()">Crear Contactos</button>
+    </div>
+  </div>
+<script src="./index.js"></script>
+</body>
+</html>
+
+
+
+
+
